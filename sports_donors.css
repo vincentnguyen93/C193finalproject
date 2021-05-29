@@ -10,12 +10,108 @@
    
 */
 
+/* Masthead style */
+
+div.grid_12 h1 {
+   display: block;
+   border: none;
+   background-color: black;
+   width: 100%;
+   margin-bottom: 5px;
+}
+
+/* Horizontal Nav List Style */ 
+
+nav.tabs li {
+   background-color: black;
+   border: 1px solid black;
+   display: block;
+   float: left;
+   width: 11.11%;
+   padding: 5px 0px 5px;
+   font-size: 0.79em;
+   margin-bottom: 10px;
+}
+
+nav.tabs a {
+   display: block;
+}
+
+
+/* Donation Summary Styles */
+
+
+div#donationSummary table {
+   font-size: 1.5em;
+   border-collapse: collapse;
+   color:; 
+   margin: 10px 0px;
+}
+
+div#donationSummary table th, div#donationSummary table td  {
+   padding: 5px;
+   vertical-align: top;
+   border: 1px solid ;
+}
+
+div#donationSummary table th  {
+   font-weight: normal;
+   text-align: left;
+   background: ;
+}
+
+div#donationSummary table td  {
+   text-align: right;
+}
+
+
+/* Donor Table Styles */
+
+div#donorTable table {
+   font-size: 0.9em;
+   border-collapse: collapse;
+   color:;
+   margin: 10px 0px 30px;
+}  
+
+div#donorTable table caption {
+   font-size: 2.5em;
+   letter-spacing: 0.12em;
+   font-weight: normal;
+   color:;
+   text-shadow: ;
+   padding: 15px 0px;  
+   font-family: ;
+   text-align: left;
+}
+
+div#donorTable table th {
+   background-color: ;
+   font-weight: normal;
+   font-size: 1.3em;
+   padding: 5px 6px;
+}
+
+div#donorTable table tr:nth-of-type(even) {
+   background-color: ;
+}
+
+div#donorTable th, div#donorTable td {
+   padding: 2px 6px;
+   border: 1px solid ;
+   vertical-align: top;
+}
+
+div#donorTable tr td:first-of-type {
+   text-align: right;
+}
+
 
 /* HTML and Body Styles */
 
 html {
-   background: linear-gradient(to bottom, rgb(131, 218, 238), rgb(7, 88, 101));
-   font-family: Verdana, Geneva, sans-serif;
+   background: linear-gradient(to bottom, gray, black);
+   font-family: Arial, Helvetica, sans-serif;
    font-size: 12px;
 }
 
@@ -40,8 +136,7 @@ body > header {
    display: -webkit-flex;
    display: flex;
    -webkit-flex-flow: row wrap;
-   flex-flow: row wrap; 
-   background: rgb(16, 79, 123); 
+   flex-flow: white; 
 }
 
 
@@ -58,115 +153,21 @@ body > header > div > img {
 
 
 
-body > header > nav#middleTop {
-   width: 100%;
-}
+/* Horizontal Nav List Style */ 
 
-
-/* Left Right Top Navigation Styles */
-
-nav#leftTop, nav#rightTop {
-   -webkit-flex: 0 0 180px;
-   flex: 0 0 180px;
-   border: 1px solid black;  
-}
-nav#leftTop > ul, nav#rightTop > ul {
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-flow: column nowrap;
-   flex-flow: column nowrap;
-   height: 100%;    
-}
-
-nav#leftTop > ul > li, nav#rightTop > ul > li {
-   -webkit-flex: 1 1 auto;
-   flex: 1 1 auto;
-   background: rgb(16, 79, 123);
-   text-align: center;
-   font-size: 1.2em;
-   border: 2px inset rgb(51, 51, 51);
-   display: -webkit-flex;
-   display: flex;
-   -webkit-align-items: center;
-   align-items: center;
-   -webkit-justify-content: center;
-   justify-content: center;
-   min-height: 40px;
-   
-}
-
-nav#leftTop > ul li > a, nav#rightTop > ul li > a {
+nav.tabs li {
+   background-color: black;
+   border: 1px solid black;
    display: block;
-   color: rgb(231, 231, 231);
+   float: left;
+   width: 11.11%;
+   padding: 5px 0px 5px;
+   font-size: 0.79em;
+   margin-bottom: 10px;
 }
 
-nav#leftTop > ul li > a:hover, nav#rightTop > ul li > a:hover {
-   color: rgb(255, 255, 121);
-}
-
-/* Top Navigation Styles */
-
-nav#middleTop ul {
-   width: 100%;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-flow: row nowrap;
-   flex-flow: row nowrap;
-   -webkit-justify-content: flex-end;
-   justify-content: flex-end;
-   -webkit-align-items: center;
-   align-items: center;
-   background-color: transparent;
-   height: 50px;
-   background-color: rgb(127, 15, 11);
-   border: 3px inset rgb(51, 51, 51);
-}
-   
-nav#middleTop ul li {
-   -webkit-flex: 1 1 0px;
-   flex: 1 1 0px;   
-   margin: 5px; 
-}
-
-nav#middleTop ul li a {
-   color: rgb(231, 231, 231);
+nav.tabs a {
    display: block;
-   font-size: 1.1em;
-   text-align: center;
-   padding: 50% 0%;
-}
-
-nav#middleTop ul li a:hover, nav#top ul li a:active {
-   color: rgb(255, 255, 121);
-}
-
-
-/* Left Navigation Styles */
-
-nav#left {
-   -webkit-flex: 0 0 180px;
-   flex: 0 0 180px;
-   border: 4px inset rgb(51, 51, 51);
-   background-color: rgb(4, 93, 5);
-   padding: 10px; 
-}
-
-nav#left ul li {
-   line-height: 1.5em;
-   margin: 0px 0px 0px 8px;
-}
-
-nav#left ul li.newgroup {
-   margin-top: 15px;
-}
-
-
-nav#left ul li a {
-   color: rgb(255, 255, 231);
-}
-
-nav#left ul li a:hover {
-   text-decoration: underline;
 }
 
 
@@ -181,71 +182,25 @@ section#stats {
 }
 
 
-/* Table Styles */
-
-table {
-   margin: 30px auto 20px;
-   border-collapse: collapse;
-   font-size: 1em;
-   background-color: 231, 231, 231);
-   color: rgb(91, 91, 91);
-}
-
-table caption {
-   font-size: 1.8em;
-   font-weight: bold;
-   text-align: center;
-   caption-side: top;
-   margin-bottom: 15px;
-   letter-spacing: 0.2em;
-   font-variant:small-caps;
-}
-
-
-th, td {
-   border: 1px solid rgb(121, 121, 121);
-   padding: 2px 5px;
-}
-
-table thead th {
-   vertical-align: center;
-   text-align: center;
-   height: 30px;
-   background-color: rgb(138, 204, 221);
-   
-}
-
-table tbody tr:nth-of-type(even) td {
-   background-color: rgba(211, 211, 211, 0.7);
-}
-
-table tfoot {
-   background-color: rgb(138, 204, 221);
-}
-
-table tbody td {
-   background-color: rgba(255, 255, 255, 0.6);
-   text-align: right;
-}
-
-table tbody tr td:first-of-type, table tbody tr td:nth-of-type(2) {
-   text-align: left;
-}
-
-
-/* Footer Styles */
+/* Footer */
 
 footer {
    width: 100%;
-   border: 4px inset rgb(51, 51, 51);
+   background-color: black;
+   display: block;
+   overflow: hidden;
 }
 
-footer p {
-   color: rgb(211, 211, 211);
-   font-size: 0.9em;
+
+div#follow > article img {
+   display: block;
+   width: 35%;
+   margin: 0px 10px 10px;
+}
+
+nav.foot {
+   width: 220px;
    text-align: center;
-   background-color: rgb(51, 51, 51);
-   margin: 0px;
-   padding: 10px 0px;
+   float: left;
 }
 
