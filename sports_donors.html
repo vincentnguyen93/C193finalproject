@@ -11,7 +11,6 @@
    <link rel="stylesheet" href="sports_donors.css">
    <script src="sports_donors_sort.js" async></script>
    <script src="sports_credit.js" async></script>
-   
 </head>
 
 <body>
@@ -29,29 +28,25 @@
          <form id="donorForm" name="donorForm" method="post" action="sports_credit.html">
             <h1>Sports Donor Information</h1>
             <fieldset id="contactInfo">
-               <label for="fnBox">First Name**</label>
+               <legend>If you are interested in a minor contribution, fill in the information below:</legend>
+               <label for="fnBox">First Name</label>
                <input type="text" name="fnBox" id="fnBox" required />
       
-               <label for="lnBox">Last Name**</label>
+               <label for="lnBox">Last Name</label>
                <input type="text" name="lnBox" id="lnBox" required />
                
-               <label for="emailBox">Email**</label>
+               <label for="emailBox">Email</label>
                <input type="email" name="email" id="emailBox" required />
                
-               <label for="phoneBox">Phone Number**</label>
+               <label for="phoneBox">Phone Number</label>
                <input type="tel" name="phoneNumber" id="phoneBox"
                pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder = "(nnn)-nnn-nnnn" required />
 
-               <fieldset id="amount">
-                  <legend>Thank you for your kind donation!</legend>
-                  
-                  <label for="donation">Donation amount:</label>
-                  <p>$<input type="text" name="donation" id="donation" placeholder="nnn.nn" required /></p>
-               </fieldset>
-   
+               
+               <label for="donation">Donation:</label>
+               <input type="text" name="donation" id="donation" placeholder="$nnn.nn" required />
+               
             </fieldset>
-
-
 
          <input type="submit" value="Continue to payment" id="contactSubmit">
          </form>
