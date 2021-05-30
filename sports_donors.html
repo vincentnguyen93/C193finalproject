@@ -10,13 +10,13 @@
    <link rel="stylesheet" href="index_grid.css">
    <link rel="stylesheet" href="sports_donors.css">
    <script src="sports_donors_sort.js" async></script>
-   <script src="sports_credit.js" async></script>
+   <script src="sports_donor_signup.js" async></script>
 </head>
 
 <body>
    
    <div class="grid_9">
-      <section class="topDonors">
+      <section id="topDonors">
          <h1>Top Donors</h1>
          <div id="donationSummary"></div>
          <div id="donorTable"></div>
@@ -24,16 +24,17 @@
    </div>
 
    <div class="grid_3">
-      <aside id="donorInfo">
+      <section id="donorInfo">
          <form id="donorForm" name="donorForm" method="post" action="sports_credit.html">
-            <h1>Sports Donor Information</h1>
+         <h1>Sports Donor Information</h1>
+            
             <fieldset id="contactInfo">
                <legend>If you are interested in a minor contribution, fill in the information below:</legend>
                <label for="fnBox">First Name</label>
-               <input type="text" name="fnBox" id="fnBox" required />
+               <input type="text" name="firstName" id="fnBox" required />
       
                <label for="lnBox">Last Name</label>
-               <input type="text" name="lnBox" id="lnBox" required />
+               <input type="text" name="lastName" id="lnBox" required />
                
                <label for="emailBox">Email</label>
                <input type="email" name="email" id="emailBox" required />
@@ -42,17 +43,38 @@
                <input type="tel" name="phoneNumber" id="phoneBox"
                pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder = "(nnn)-nnn-nnnn" required />
 
-               
-               <label for="donation">Donation:</label>
-               <input type="text" name="donation" id="donation" placeholder="$nnn.nn" required />
-               
+               <label for="donationBox">Donation:</label>
+               <input type="text" name="donationAmt" id="donationBox" placeholder="$nnn.nn" required />             
             </fieldset>
 
-         <input type="submit" value="Continue to payment" id="contactSubmit">
+            <input type="submit" value="Continue to payment" id="contactSubmit">
          </form>
-      </aside>
+      </section>
    </div>
-   
+
+   <div class="grid_3">
+   <aside id="donorAside">
+      <table>
+         <caption>Donor Information</caption>
+         <tr>
+            <th>Name</th>
+               <td><span id="donorName"></span></td>            
+         </tr>
+         <tr>
+            <th>Donation</th>
+               <td><span id="donation"></span></td>
+         </tr>
+         <tr>
+            <th>Email</th>
+               <td><span id="donorEmail"></span></td>
+         </tr>
+         <tr>
+            <th>Phone</th>
+               <td><span id="donorPhone"></span></td>
+         </tr>
+      </table>
+   </aside>
+   </div>
 
 
    <footer>

@@ -2,7 +2,7 @@
 
 
 /*
-   Filename: ah_product.js  
+   Filename:   
    
    Variables:
    the donors multi-dimension array contains the following data with following column indices
@@ -14,7 +14,6 @@
       donors[5] - donation amount
       donors[6] - donation date   
 */
-
 
 var donors = 
 [
@@ -74,7 +73,7 @@ var donors =
    Author:  
    Date:
 
-   Filename: ah_report.js
+   Filename: 
 
    Functions:
 
@@ -144,5 +143,3 @@ function writeDonorRow(value) {
    donorTable += "<td>" + value[4] + "</td>";
    donorTable += "</tr>";
 }
-
-

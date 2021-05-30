@@ -11,31 +11,34 @@
    <link rel="stylesheet" href="index_grid.css">
    <link rel="stylesheet" href="sports_credit.css">
    <script src="sports_donor_info.js" async></script>
-   <script src="sports_credit.js" async></script>
 </head>
 
 <body>
-   <aside id="donor2info">
-      <table>
-         <caption>Donor Information</caption>
-         <tr>
-            <th>Donor Name</th>
-               <td><span id="donorName"></span></td>           
-         </tr>         
-         <tr>
-            <th>Donation Amount</th>
-               <td><span id="donation"></span></td>           
-         </tr>
-         <tr>
-            <th>Donor Email</th>
-               <td><span id="donorEmail"></span></td>
-         </tr>
-         <tr>
-            <th>Donor Phone</th>
-               <td><span id="donorPhone"></span></td>
-         </tr>
-      </table>
-   </aside>
+   <div class="grid_6">
+      <aside id="donor2info">
+         <table>
+            <caption>Donor Information</caption>
+            <tr>
+               <th>Donor Name</th>
+                  <td><span id="donorName"></span></td>           
+            </tr>         
+            <tr>
+               <th>Donation Amount</th>
+                  <td><span id="donation"></span></td>           
+            </tr>
+            <tr>
+               <th>Donor Email</th>
+                  <td><span id="donorEmail"></span></td>
+            </tr>
+            <tr>
+               <th>Donor Phone</th>
+                  <td><span id="donorPhone"></span></td>
+            </tr>
+         </table>
+      </aside>
+   </div>
+
+   <div class="grid_6">
       <section id="payment">
          <h1>Payment Information</h1>
 
@@ -48,8 +51,8 @@
                <label for="cardHolder">Card Holder**</label>
                <input type="text" name="cardHolder" id="cardHolder" required />
 
+               <label>Credit Company*</label>
                <fieldset id="cardType">
-                  <label class="cardLabel">Credit Company**</label>
                   <label class="cardLabel">
                      <input type="radio" name="company" id="amex" required />
                      <img src="" alt="American Express" />
@@ -83,5 +86,7 @@
             <input type="submit" id="subButton" value="Submit Payment" />
          </form>
       </section>
+   </div>
+
 </body>
 </html>

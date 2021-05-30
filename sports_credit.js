@@ -4,6 +4,10 @@
 
    Function List
    =============
+
+   writeSessionValues()
+      Writes data values from session storage in to the
+      registration summary form
    
    runSubmit()
       Runs validation tests when the submit button is clicked
@@ -33,15 +37,6 @@
       Returns true of idNum satisfies the Luhn Algorithm
 
 */
-
-window.addEventListener("load", function() {
-   sessionStorage.name = document.forms.donorForm.elements.fnBox.value + " " + document.forms.donorForm.elements.lnBox.value;
-   sessionStorage.donation = document.forms.donorForm.elements.donation.value;
-   sessionStorage.email = document.forms.donorForm.elements.emailBox.value;
-   sessionStorage.phone = document.forms.donorForm.elements.phoneBox.value;
-
-   writeSessionValues();
-});
 
 window.addEventListener("load", function() {
    document.getElementById("subButton").onclick = runSubmit;
@@ -125,10 +120,3 @@ function luhn(idNum) {
    return sumDigits(string1 + string2) % 10 === 0;
 }
 
-
-function writeSessionValues() {
-   document.getElementById("donorName").textContent = sessionStorage.name;
-   document.getElementById("donation").textContent = sessionStorage.donation;
-   document.getElementById("donorEmail").textContent = sessionStorage.email;
-   document.getElementById("donorPhone").textContent = sessionStorage.phone;
-}
