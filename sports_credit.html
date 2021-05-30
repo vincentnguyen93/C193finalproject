@@ -10,22 +10,35 @@
    <link rel="stylesheet" href="index_base.css">
    <link rel="stylesheet" href="index_grid.css">
    <link rel="stylesheet" href="sports_credit.css">
-   <script src="sports_credit.js" async></script>
+   <script src="sports_credit.2js" async></script>
 </head>
 
 <body>
-   <header>
+   <aside id="donor2info">
+      <table>
+         <caption>Donor Information</caption>
+         <tr>
+            <th>Donor Name</th>
+               <td><span id="donorName"></span></td>           
+         </tr>         
+         <tr>
+            <th>Donation Amount</th>
+               <td><span id="donation"></span></td>           
+         </tr>
+         <tr>
+            <th>Donor Email</th>
+               <td><span id="donorEmail"></span></td>
+         </tr>
+         <tr>
+            <th>Donor Phone</th>
+               <td><span id="donorPhone"></span></td>
+         </tr>
+      </table>
+   </aside>
       <section id="payment">
          <h1>Payment Information</h1>
 
          <form action="sports_final.html" id="credit" name="credit" method="post">
-
-            <fieldset id="amount">
-               <legend>Thank you for your kind donation!</legend>
-               
-               <label for="donation">Donation amount:</label>
-               <p>$<input type="text" name="donation" id="donation" placeholder="nnn.nn" required /></p>
-            </fieldset>
 
             <fieldset id="creditcard">
                
@@ -69,6 +82,5 @@
             <input type="submit" id="subButton" value="Submit Payment" />
          </form>
       </section>
-   </header>
 </body>
 </html>

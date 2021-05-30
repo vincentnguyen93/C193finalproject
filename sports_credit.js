@@ -35,23 +35,12 @@
 */
 
 window.addEventListener("load", function() {
-   // Retrieve the field/value pairs from the URL
-   var orderData = location.search.slice(1);
-   orderData = orderData.replace(/\+/g, " ");
-   orderData = decodeURIComponent(orderData);
-   var orderFields = orderData.split(/[&=]/g);
+   sessionStorage.name = document.forms.donorForm.elements.fnBox.value + " " + document.forms.donorForm.elements.lnBox.value;
+   sessionStorage.donation = document.forms.donorForm.elements.donation.value;
+   sessionStorage.email = document.forms.donorForm.elements.emailBox.value;
+   sessionStorage.phone = document.forms.donorForm.elements.phoneBox.value;
 
-   // Write the field values to the order form
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
-   document.forms.order.elements.
+   writeSessionValues();
 });
 
 window.addEventListener("load", function() {
@@ -100,7 +89,7 @@ function validateNumber() {
 
 function validateCVC() {
    var cardCVC = document.getElementById("cvc");
-   vard creditCard = document.querySelector('input[name="company"]:checked').value;
+   var creditCard = document.querySelector('input[name="company"]:checked').value;
 
    if (cardCVC.validity.valueMissing) {cardCVC.setCustomValidity("Enter your code CVC number");}
    else if ((creditCard === "amex") && (/^\d{4}$/.test(cardCVC.value) === false)) {
@@ -134,4 +123,12 @@ function luhn(idNum) {
 
    // Determine if the sum of the digits is divisible by 10
    return sumDigits(string1 + string2) % 10 === 0;
+}
+
+
+function writeSessionValues() {
+   document.getElementById("donorName").textContent = sessionStorage.name;
+   document.getElementById("donation").textContent = sessionStorage.donation;
+   document.getElementById("donorEmail").textContent = sessionStorage.email;
+   document.getElementById("donorPhone").textContent = sessionStorage.phone;
 }
