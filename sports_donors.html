@@ -14,45 +14,69 @@
 </head>
 
 <body>
+<div class="container">
+   <div class="grid_12">
+      <header>   
+         <h1>
+            <a href="vn_sports.html">The Unrecruited</a>
+         </h1>
+      </header>
+   </div>
+   <div class="grid_12">
+      <nav class="tabs">
+         <ul>
+            <li><a href="vn_football.html">Football</a></li>
+            <li><a href="vn_basketball.html">Basketball</a></li>
+            <li><a href="vn_baseball.html">Baseball</a></li>
+            <li><a href="vn_soccer.html">Soccer</a></li>
+            <li><a href="vn_tennis.html">Tennis</a></li>
+            <li><a href="vn_crosscountry.html">Cross-Country</a></li>
+            <li><a href="vn_wrestling.html">Wrestling</a></li>
+            <li><a href="vn_college.html">College</a></li>
+            <li><a href="vn_professional.html">Professional</a></li>
+         </ul>
+      </nav>
+   </div>
    
-   <div class="grid_9">
+   <div class="grid_8">
       <section id="topDonors">
-         <h1>Top Donors</h1>
-         <div id="donationSummary"></div>
          <div id="donorTable"></div>
       </section>
    </div>
 
-   <div class="grid_3">
+   <div class="grid_4">
       <section id="donorInfo">
          <form id="donorForm" name="donorForm" method="post" action="sports_credit.html">
          <h1>Sports Donor Information</h1>
             
             <fieldset id="contactInfo">
-               <legend>If you are interested in a minor contribution, fill in the information below:</legend>
-               <label for="fnBox">First Name</label>
+               <legend>Donate below:</legend>
+               <label for="fnBox">First Name:</label>
                <input type="text" name="firstName" id="fnBox" required />
       
-               <label for="lnBox">Last Name</label>
+               <label for="lnBox">Last Name:</label>
                <input type="text" name="lastName" id="lnBox" required />
                
-               <label for="emailBox">Email</label>
+               <label for="emailBox">Email:</label>
                <input type="email" name="email" id="emailBox" required />
                
-               <label for="phoneBox">Phone Number</label>
+               <label for="phoneBox">Phone Number:</label>
                <input type="tel" name="phoneNumber" id="phoneBox"
                pattern="^\d{10}$|^(\(\d{3}\)\s*)?\d{3}[\s-]?\d{4}$" placeholder = "(nnn)-nnn-nnnn" required />
 
                <label for="donationBox">Donation:</label>
                <input type="text" name="donationAmt" id="donationBox" placeholder="$nnn.nn" required />             
+            
+            
+               <input type="submit" value="Continue" id="contactSubmit">
+
             </fieldset>
 
-            <input type="submit" value="Continue to payment" id="contactSubmit">
          </form>
       </section>
    </div>
 
-   <div class="grid_3">
+   <div class="grid_4">
    <aside id="donorAside">
       <table>
          <caption>Donor Information</caption>
@@ -76,10 +100,45 @@
    </aside>
    </div>
 
+   <div class="grid_4">
+      <div id="donationSummary"></div>
+   </div>
 
-   <footer>
 
-   </footer>
- 
+   <div class="grid_12">
+      <footer>
+         <header class="end">
+            <h1><a href="vn_sports.html">The Unrecruited</a>
+            </h1>
+         </header>
+         <div class="grid_7">
+            <div id="follow">
+               <article>
+                  <p>
+                     <a href="#">Subscribe and stay updated
+                     </a>
+                  </p>
+                  <p>Follow us</p>
+                  <a href="#">
+                     <img src="follow.png" alt="follow icons">
+                  </a>
+               </article>
+            </div>
+         </div>
+            
+         <div class="grid_3">
+            <nav class="foot">
+               <ul>
+                  <li><a href="#"><p>Contact Us</p></a></li>
+                  <li><a href="#"><p>Staff Directory</p></a></li>
+                  <li><a href="#"><p>Find jobs</p></a></li>
+                  <li><a href="#"><p>Careers</p></a></li>
+                  <li><a href="#"><p>Obituaries</p></a></li>
+               </ul>
+            </nav>
+         </div>
+      </footer>
+      </div>
+</div>
 </body>
 </html>
