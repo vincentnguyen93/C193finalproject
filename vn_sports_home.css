@@ -8,6 +8,31 @@
 
 */
 
+/* Media styles */
+
+/*  ==================
+    Mobile Styles 0px to 480px
+    ================== */
+
+    @media only screen and (max-width: 480px) {
+
+    }
+    
+    /*  ==================
+        Tablet Styles 481px +
+        ================== */
+    
+    @media only screen and (min-width: 481px) {
+    
+    }
+    
+    /*  ==================
+        Desktop Styles 796px +
+        ================== */
+    
+    @media only screen and (min-width: 796px) {
+    
+    }
 
 
 /* HTML and Body style */
@@ -41,6 +66,14 @@ div.grid_12 h1 {
     margin-bottom: 5px;
 }
 
+div.grid_12 header h1 {
+    color: white;
+    font: bold 6.0em serif;
+    padding-top: 15px;
+    text-align: left;
+}
+
+
 /* Horizontal Nav List Style */ 
 
 nav.tabs li {
@@ -48,9 +81,9 @@ nav.tabs li {
     border: 1px solid black;
     display: block;
     float: left;
-    width: 11.11%;
+    width: 12.5%;
     padding: 5px 0px 5px;
-    font-size: 0.79em;
+    font-size: 0.9em;
     margin-bottom: 10px;
  }
  
@@ -79,13 +112,7 @@ nav.tabs li {
     text-decoration: none;
  }
 
-
-
-/* Main Content Styles */
-
-div.grid_9 h2 {
-    margin-bottom: 10px;
-}
+/* Img styles */
 
 img {
     display: block;
@@ -103,12 +130,30 @@ a img > a:hover, a img > a:active {
     text-decoration: none;
 }
 
-/* Pro section layout */
+/* Masthead and header text styles */
 
-section#main {
-    float: left;
-    position: relative;
+
+div.grid_9 h2 {
+    color: black;
+    background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2.0em;
+    text-align: center;
+    line-height: 1.5em;
+    padding-top: 2px;
+    padding-left: 5px;
+    margin-bottom: 10px;
 }
+
+section#pro h2 {
+    background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
+    font-size: 1.5em;
+    text-align: center;
+    padding: 5px;
+} 
+
+
+/* Pro section layout */
 
 section#pro {
     display: block;
@@ -126,34 +171,49 @@ section#pro img {
 }
 
 section#pro h2 {
-    background-color: white;
     border: 4px solid black;
 }
 
 section#pro aside {
-    background-color: rgb(201, 199, 199);
     margin-top: 8px;
     margin-bottom: 10px;
     padding-bottom: 3.0px;
     border: 2px solid black;
 }
 
-/* Main div layout */
+/* Professional text and layout styles */
 
 div.profeat {
+    font: bold 0.85em Georgia, serif;
+    text-align: center;
+    letter-spacing: 1px;
     display: block;
     width: 100%;
     position: relative;
     margin: 1px;
 }
 
+div.profeat > a:link, div.profeat > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div.profeat > a:hover,  div.profeat > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+
+/* Main feature text and styles */
+
+section#main {
+    float: left;
+    position: relative;
+}
+
 div#feature {
     margin-bottom: 15px;
     border: 5px solid black;
-}
-
-div#feature p.sub {
-    padding: 5px;
 }
 
 div#side img {
@@ -165,7 +225,7 @@ div#side img {
 
 div#side {
     width: 220px;
-    background-color: white;
+    background-color: transparent;
 }
 
 div#side p {
@@ -183,7 +243,7 @@ div#side1 img {
 div#side1 {
     width: 220px;
     margin-top: 15px;
-    background-color: white;
+    background-color: transparent;
 }
 
 div#side1 p {
@@ -191,11 +251,93 @@ div#side1 p {
     margin-top: 7px;
 }
 
-/* College layout */
+/* Main div styles and text */
+
+
+div#feature article {
+    color: black;
+    background-color: transparent;
+    text-align: center;
+    font: bold 3.0em Georgia, serif;
+}
+
+div#feature p.sub {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    text-align: center;
+    font-family: 'Palatino Linotype', 'Book Antiqua', 'Palatino', serif;
+    padding: 5px;
+}
+
+div#feature article > a:link, div#feature article > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div#feature article > a:hover,  div#feature article > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+div#feature article a {
+    text-decoration: none;
+}
+
+/* Main div side bar text and styles */ 
+
+div#side article {
+    color: black;
+    text-align: center;
+    line-height: 1.5em;
+    font: bold 1.0em Georgia, serif;
+}
+
+div#side > article > p {
+    color: rgb(107, 107, 107);
+    font-size: 0.75em;
+}
+
+div#side1 > article > p {
+    color: rgb(107, 107, 107);
+    font-size: 0.75em;
+}
+
+div#side article > a:link, div#side article > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div#side article > a:hover,  div#side article > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+div#side1 article {
+    color: black;
+    text-align: center;
+    line-height: 1.5em;
+    font: bold 1.0em Georgia, serif;
+}
+
+div#side1 article > a:link, div#side1 article > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div#side1 article > a:hover,  div#side1 article > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+/* College text and style layout */
 
 div.grid_3 h3 {
     border: 4px solid black;
+    background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));;
     margin-bottom: 5px;
+    font-size: 1.25em;
+    padding: 5px;
+    text-align: center;
 }
 
 section#colbar aside {
@@ -212,6 +354,9 @@ div.college {
 div.college p {
     background-color: rgb(211, 211, 211);
     margin: 11px;
+    font: bold 0.85em Georgia, serif;
+    text-align: center;
+    border: 1px solid black;
 }
 
 div.college img {
@@ -222,13 +367,24 @@ div.college img {
 }
 
 
-/* Extra reads layout */
+div.college article > a:link, div.college article > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div.college article > a:hover,  div.college article > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+/* Extra reads text and layout */
 
 div.grid_6 h3 {
-    color: white;
-    background-color: black;
+    background: linear-gradient(to left, white, rgb(48, 195, 206));
     padding: 5px;
     margin-bottom: 5px;
+    color: black;
+    font-size: 1.5em;
 }
 
 div#read {
@@ -245,12 +401,19 @@ div#read > a > p {
     margin-left: 5px;
     margin-bottom: 10px;
     float: both;
+    color: black;
+    font: bold 1.0em Georgia, serif;
+    text-align: center;
+    letter-spacing: 1.0px;
 }
 
 div#read > p {
     width: 160px;
     float: left;
     padding-bottom: 5px;
+    color: rgb(87, 87, 87);
+    font:  1.1em Georgia, serif;
+    text-align: left;
 
 }
 
@@ -262,13 +425,85 @@ div#read img {
     margin: 0 25px 15px 10px;
 }
 
-/* Footer */
 
-footer {
-    width: 100%;
-    background-color: black;
-    display: block;
-    overflow: hidden;
+div#read p  > a:link, div#read p  > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div#read p  > a:hover,  div#read p  > a:active {
+    color: gray;
+    text-decoration: none;
+}
+
+/* Footer style and text */
+
+section#foot div.grid_12 {
+    background: linear-gradient(to right, black, rgb(48, 195, 206))
+ }
+
+footer  h1 {
+    color: white;
+    font: bold 3.0em serif;
+    padding-top: 5px;
+    text-align: left;
+}
+
+h1 > a:link, h1 > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+h1 > a:hover,  h1 > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+footer p {
+    color: white;
+    font: 1.0em Georgia, serif;
+    text-align: left;
+}
+
+footer p > a:link, footer p > a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+footer p > a:hover,  footer p > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+div#follow > a:link, div#follow > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+div#follow > a:hover, div#follow > a:active {
+    color: white;
+    text-decoration: none;
+}
+
+div#follow p {
+    line-height: 2.5em;
+}
+
+
+nav.foot p {
+    color: white;
+    font: 1.0em Georgia, serif;
+    line-height: 2.0em;
+}
+
+nav.foot > a:link, nav.foot > a:visited {
+    color: black;
+    text-decoration: none;
+}
+
+nav.foot > a:hover,  nav.foot > a:active {
+    color: gray;
+    text-decoration: none;
 }
 
 
