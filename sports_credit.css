@@ -13,7 +13,7 @@
 /* HTML and Body Styles */
 
 html {
-   background: linear-gradient(to top, rgb(74, 111, 117), black);
+   background: linear-gradient(to top, rgb(112, 211, 214), black);
    font-family: Arial, Helvetica, sans-serif;
    font-size: 14px;
 }
@@ -29,7 +29,7 @@ body {
    max-width: 980px;
    min-width: 420px;
    margin: 30px auto;
-   border: 5px solid rgba(112, 199, 214, 0.5);
+   border: 5px solid rgba(48, 195, 206, 0.5);
    border-radius: 3px;
 }
 
@@ -94,7 +94,7 @@ nav.tabs a {
 }
 
 nav.tabs a:hover {
-   background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
+   background: linear-gradient(to left, rgb(226, 226, 226), rgb(48, 195, 206));
    color: white;
 }
 
@@ -121,7 +121,7 @@ section#payment {
 section h1 {
    font-size: 1.15em;
    font-weight: bold;
-   background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
+   background: linear-gradient(to left, rgb(226, 226, 226), rgb(48, 195, 206));
    padding: 10px 0px 10px;  
    font: bold 3.0em;
    text-align: center;
@@ -232,6 +232,11 @@ input[type="submit"] {
    border: 2px solid black;
    border-radius: 15px;
    cursor: pointer;
+}
+
+form#credit input[type=submit]:hover {
+   background-color: rgba(0, 13, 200, 0.8);
+   color: white;
 }
 
 

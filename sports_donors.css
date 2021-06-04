@@ -28,6 +28,7 @@ body {
    min-width: 420px;
    margin: 30px auto;
    border: 5px solid rgba(112, 199, 214, 0.5);
+   border-radius: 3px;
 }
 
 /* Masthead and header text styles */
@@ -94,25 +95,6 @@ nav.tabs li > a:link, nav.tabs li > a:visited {
 nav.tabs li > a:hover,  nav.tabs li > a:active {
    color: black;
    text-decoration: none;
-}
-
-
-
-/* Horizontal Nav List Style */ 
-
-nav.tabs li {
-   background-color: black;
-   border: 1px solid black;
-   display: block;
-   float: left;
-   width: 11.11%;
-   padding: 5px 0px 5px;
-   font-size: 0.79em;
-   margin-bottom: 10px;
-}
-
-nav.tabs a {
-   display: block;
 }
 
 
@@ -288,7 +270,6 @@ aside#donorAside table {
 aside#donorAside table caption {
    font: bold 1.2em sans-serif;
    text-align: center;
-   letter-spacing: 0.2em;
    margin: 5px 0px 15px 0px;
    color: black;
    background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
