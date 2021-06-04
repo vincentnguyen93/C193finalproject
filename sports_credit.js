@@ -70,7 +70,7 @@ function validateName() {
 
 function validateCredit() {
    var creditCard = document.forms.credit.elements.company[0];
-   if (credidCard.validity.valueMissing) {creditCard.setCustomValidity("Select your credit card company");}
+   if (creditCard.validity.valueMissing) {creditCard.setCustomValidity("Select your credit card company");}
    else {creditCard.setCustomValidity("");}
 }
 
@@ -97,7 +97,7 @@ function validateCVC() {
 function sumDigits(numStr) {
    var digitTotal = 0;
    for (var i = 0; i < numStr.length; i++) {
-      digitalTotal += parseInt(numStr.charAt(i));
+      digitTotal += parseInt(numStr.charAt(i));
    }
    return digitTotal;
 }

@@ -32,21 +32,19 @@ body {
 
 /* Masthead and header text styles */
 
-div.grid_12 header h1 {
-   color: white;
-   font: bold 6.0em serif;
-   padding-top: 15px;
-   text-align: left;
-}
-
-/* Masthead style */
-
 div.grid_12 h1 {
    display: block;
    border: none;
    background: linear-gradient(to right, black, rgb(48, 195, 206));
    width: 100%;
    margin-bottom: 5px;
+}
+
+div.grid_12 header h1 {
+   color: white;
+   font: bold 6.0em serif;
+   padding-top: 15px;
+   text-align: left;
 }
 
 h1 > a:link, h1 > a:visited {
@@ -75,12 +73,11 @@ nav.tabs li {
 
 nav.tabs a {
    display: block;
-}
-
-
-/* Nav text style */
-
-nav.tabs a {
+   text-align: center;   
+   background-color: rgb(211, 211, 211);
+   font-family: Georgia, serif;
+   font-size: 1.0em;
+   line-height: 1.5em;
    text-align: center;
 }
 
@@ -98,16 +95,6 @@ nav.tabs li > a:hover,  nav.tabs li > a:active {
    color: black;
    text-decoration: none;
 }
-
-nav.tabs a {
-   background-color: rgb(211, 211, 211);
-   font-family: Georgia, serif;
-   font-size: 1.0em;
-   line-height: 1.5em;
-   text-align: center;
-}
-
-
 
 
 
@@ -299,7 +286,7 @@ aside#donorAside table {
 
 
 aside#donorAside table caption {
-   font: 1.2em bold;
+   font: bold 1.2em sans-serif;
    text-align: center;
    letter-spacing: 0.2em;
    margin: 5px 0px 15px 0px;

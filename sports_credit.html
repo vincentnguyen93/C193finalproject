@@ -79,23 +79,23 @@
                <label for="cardHolder">Card Holder**</label>
                <input type="text" name="cardHolder" id="cardHolder" required />
 
-               <label>Credit Company*</label>
+               <label>Credit Company**</label>
                <fieldset id="cardType">
                   <label class="cardLabel">
                      <input type="radio" name="company" id="amex" required />
-                     <img src="" alt="American Express" />
+                     <img src="amex.png" alt="American Express" />
                   </label>
                   <label class="cardLabel">
                      <input type="radio" name="company" id="discover" required />
-                     <img src="" alt="Discover">
+                     <img src="discover.png" alt="Discover">
                   </label>
                   <label class="cardLabel">
                      <input type="radio" name="company" id="master" required />
-                     <img src="" alt="MasterCard">
+                     <img src="master.png" alt="MasterCard">
                   </label>
                   <label class="cardLabel">
                      <input type="radio" name="company" id="visa" required />
-                     <img src="" alt="Visa">
+                     <img src="visa.png" alt="Visa">
                   </label>
                </fieldset>
 
@@ -104,9 +104,34 @@
                pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" />
 
                <label for="expDate">Expiration Date**</label>
-               <input type="text" name="expDate" id="expDate" required placeholder="mm/yyyy" />
+               <select id="months" name="months" size="" required>
+                  <option value="Jan">Jan</option>
+                  <option value="Feb">Feb</option>
+                  <option value="Mar">Mar</option>
+                  <option value="Apr">Apr</option>
+                  <option value="May">May</option>
+                  <option value="Jun">Jun</option>
+                  <option value="Jul">Jul</option>
+                  <option value="Aug">Aug</option>
+                  <option value="Sept">Sept</option>
+                  <option value="Oct">Oct</option>
+                  <option value="Nov">Nov</option>
+                  <option value="Dec">Dec</option>
+               </select>
+               <select id="years" name="years" size="" required>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+               </select>
 
-               <label for="cvc">CVC** (The number on the back of your card)</label>
+               <label for="cvc">CVC**</label>
                <input type="text" name="cvc" id="cvc" pattern="^\d{3,4}$" required />
             </fieldset>
 

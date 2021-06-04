@@ -16,10 +16,6 @@ html {
    background: linear-gradient(to top, rgb(74, 111, 117), black);
    font-family: Arial, Helvetica, sans-serif;
    font-size: 14px;
-   display: -webkit-flex;
-   display: flex;
-   -webkit-flex-flow: row wrap;
-   flex-flow: row wrap; 
 }
 
 body {
@@ -28,10 +24,13 @@ body {
    -webkit-flex-flow: row wrap;
    flex-flow: row wrap;   
    background: rgb(226, 226, 226);
+   -webkit-align-items: center;
+   align-items: center;
    max-width: 980px;
    min-width: 420px;
    margin: 30px auto;
    border: 5px solid rgba(112, 199, 214, 0.5);
+   border-radius: 3px;
 }
 
 /* Masthead and header text styles */
@@ -43,14 +42,6 @@ div.container {
    flex-flow: row wrap; 
 }
 
-div.grid_12 header h1 {
-   color: white;
-   font: bold 6.0em serif;
-   padding-top: 15px;
-   text-align: left;
-}
-
-/* Masthead style */
 
 div.grid_12 h1 {
    display: block;
@@ -58,6 +49,15 @@ div.grid_12 h1 {
    background: linear-gradient(to right, black, rgb(48, 195, 206));
    width: 100%;
    margin-bottom: 5px;
+}
+
+
+div.grid_12 header h1 {
+   width: 100%;
+   color: white;
+   font: bold 6.0em serif;
+   padding-top: 15px;
+   text-align: left;
 }
 
 h1 > a:link, h1 > a:visited {
@@ -71,7 +71,7 @@ h1 > a:hover,  h1 > a:active {
 }
 
 
-/* Horizontal Nav List Style */ 
+/* Nav List and Text Style */ 
 
 nav.tabs li {
    background-color: black;
@@ -86,13 +86,16 @@ nav.tabs li {
 
 nav.tabs a {
    display: block;
+   text-align: center;   
+   background-color: rgb(211, 211, 211);
+   font-family: Georgia, serif;
+   font-size: 1.0em;
+   line-height: 1.5em;
 }
 
-
-/* Nav text style */
-
-nav.tabs a {
-   text-align: center;
+nav.tabs a:hover {
+   background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
+   color: white;
 }
 
 nav.tabs li > a:link, nav.tabs li > a:visited {
@@ -101,37 +104,19 @@ nav.tabs li > a:link, nav.tabs li > a:visited {
 }
 
 nav.tabs li > a:hover,  nav.tabs li > a:active {
-   color: rgba(112, 199, 214, 0.5);
+   color: black;
    text-decoration: none;
 }
 
-nav.tabs a {
-   background-color: rgb(211, 211, 211);
-   font-family: Georgia, serif;
-   font-size: 1.0em;
-   line-height: 1.5em;
-   text-align: center;
-}
-
-
-/* Horizontal Nav List Style */ 
-
-nav.tabs li {
-   background-color: black;
-   border: 1px solid black;
-   display: block;
-   float: left;
-   width: 11.11%;
-   padding: 5px 0px 5px;
-   font-size: 0.79em;
-   margin-bottom: 10px;
-}
-
-nav.tabs a {
-   display: block;
-}
 
 /* Payment form section */
+
+
+section#payment {
+   width: 600px; 
+   padding: 5px 10px 10px 20px;
+   margin: 10px auto; 
+}
 
 section h1 {
    font-size: 1.15em;
@@ -144,50 +129,94 @@ section h1 {
    border: 2px solid black;
 }
 
-section#payment {
-   width: 600px; 
-   padding: 10px 20px 20px 40px;
-   margin: 10px auto; 
+section span {
+   display: block;
+   width: 100px;
+   float: left;
+   margin: 3px 0px 3px 5px;
+   font-size: 0.8em;
+   color: black;
 }
 
-section fieldset{
-   margin: 10px 0px;
+fieldset#cardType {
+   border: none;
+}
+
+fieldset#creditcard {
+   margin: 15px 0px 35px;
    padding-top: 8px;
-   border: none;  
+   border-right: 5px solid black;
+   border-bottom: none;
+   border-left: 5px solid black;
+   border-top: none;
+   border-radius: 15px;
+   border-top-right-radius: 0px;
+   border-bottom-left-radius: 0px;    
 }
 
-section input {
+
+section input, section select {
    display: block;
    float: left;
    margin: 3px 0px;
    width: 200px;
-   color: rgb(101, 101, 101);
+   color: black;
 }
 
-form#credit label {
+section select {
+   font-size: 0.75em;
+   color: black;
+}
+
+
+section legend {
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+section label {
    display: block;
    float: left;
    clear: left;
-   margin: 3px;
    width: 240px;
-   font-size: 0.8em;
+   color: black;
+   border: none;
+}
+
+section label.cardLabel {
+   display: inline-block;
+   margin: 4px;
+   width: 100px;
+   float: none;
+}
+
+section select#months {
+   display: block;
+   float: left;
+   margin: 3px 15px 5px 0px;
+   width: 55px;
+   color: rgb(101, 101, 101);
+}
+
+section select#years {
+   display: block;
+   float: left;
+   margin: 3px 0px;
+   width: 55px;
    color: rgb(101, 101, 101);
 }
 
 
-form#credit label.cardLabel {
-   display: inline-block;
-   width: 50px;
-   float: none;
-}
-
-form#credit input[type='radio'] {
+section input[type="radio"] {
    width: 20px;
    display: inline-block;
 }
 
-img {
-   display: inline
+
+
+img src {
+   display: inline-block;
+   border: none;
 }
 
 input[type="submit"] {
@@ -205,17 +234,6 @@ input[type="submit"] {
    cursor: pointer;
 }
 
-
-input[type=submit]:hover {
-   background-color: rgba(0, 13, 200, 0.8);
-   color: white;
-   border-radius: 20px;
-   border: none;
-}
-
-fieldset#cardType {
-   border: none;
-}
 
 
 /* Aside style */
@@ -240,7 +258,6 @@ aside#donor2info table {
    border-bottom-left-radius: 0px;  
    font-size: 0.95em;
    color: black;
-   position: relative;
 }
 
 
@@ -275,6 +292,7 @@ aside#ddonor2info table th {
 }
 
 aside#donor2info table td {
+   display: block;
    vertical-align: top;
    text-align: left;
    font-size: 0.8em;
