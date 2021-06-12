@@ -1,12 +1,9 @@
 @charset "utf-8";
 /*
-   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
-   Tutorial 12
-   Case Problem 4
-
-   Gridirony Layout Style Sheet
-
    Filename: sports_donors.css
+   
+   Author:  Vincent Nguyen
+   Date:    June 9, 2021
    
 */
 
@@ -24,9 +21,11 @@ body {
    -webkit-flex-flow: row wrap;
    flex-flow: row wrap;   
    background: rgb(226, 226, 226);
-   max-width: 980px;
-   min-width: 420px;
-   margin: 30px auto;
+   width: 980px;
+   margin-top: 30px;
+   margin-bottom: 30xp;
+   margin-left: auto;
+   margin-right: auto;
    border: 5px solid rgba(112, 199, 214, 0.5);
    border-radius: 3px;
 }
@@ -68,7 +67,7 @@ nav.tabs li {
    float: left;
    width: 12.5%;
    padding: 5px 0px 5px;
-   font-size: 0.79em;
+   font-size: 0.9em;
    margin-bottom: 10px;
 }
 
@@ -105,24 +104,24 @@ div#donationSummary table {
    font-size: 1.5em;
    border-collapse: collapse;
    color:black;
-   margin: 0px 25px 0px;   
+   margin: 0px 25px 0px;
+   border: 2px solid black;
 }
 
 div#donationSummary table th, div#donationSummary table td  {
    padding: 5px;
-   vertical-align: top;
-   border: 1px solid black;
+   vertical-align: top; 
 }
 
 div#donationSummary table th  {
    font-weight: normal;
    text-align: center;
-   background: rgba(112, 199, 214, 0.5);
+   background: linear-gradient(to left, rgb(226, 226, 226), rgb(112, 199, 214));
    
 }
 
 div#donationSummary table td  {
-   text-align: right;
+   text-align: center;
 }
 
 
@@ -186,48 +185,12 @@ section#donorInfo h1 {
    border: 2px solid black;
 }
 
+
+
 /* Donor form styles*/
 
-form#donorForm label {
-   margin: 5px;
-   width: 240px;
-   font-size: 0.95em;
-   color: black;
-}
-
-form#donorForm input {
-   text-align: left;
-   padding-right: 25px;
-   margin: 5px;
-   width: 200px;
-}
-
-form#donorForm input[type=submit] {
-   width: 160px;
-   background: rgb(112, 199, 214);
-   color: black;
-   text-align: center;
-   padding: 10px 10px;
-   margin: 5px 40px;
-   border: 2px solid black;
-   border-radius: 15px;
-   cursor: pointer;
-}
-
-
-form#donorForm input[type=submit]:hover {
-   background-color: rgba(0, 13, 200, 0.8);
-   color: white;
-}
-
-
-fieldset legend {
-   text-align: center;
-   font: bold 1.45em
-}
-
 fieldset {
-   margin: 15px 0px 35px;
+   margin: 15px 0px 25px;
    padding-top: 8px;
    border-right: 5px solid black;
    border-bottom: none;
@@ -238,21 +201,69 @@ fieldset {
    border-bottom-left-radius: 0px;   
 }
 
+fieldset#contactInfo input#donationBox {
+   display: block;
+   width: 35px;
+   text-align: center;
+   color: rgb(101, 101, 101);
+}
 
+form#donorForm label {
+   margin: 5px;
+   display: block;
+   float: left;
+   clear: right;
+   font-size: 0.95em;
+   color: black;
+}
+
+form#donorForm input {
+   display: block;
+   float: right;
+   padding-right: 25px;
+   margin: 6px;
+   width: 100px;
+}
+
+form#donorForm input[type=submit] {
+   width: 160px;
+   background: rgb(112, 199, 214);
+   color: black;
+   text-align: center;
+   font-size: 1.1em;
+   padding: 10px 10px;
+   margin: 15px 40px 5px;
+   border: 2px solid black;
+   border-radius: 15px;
+   cursor: pointer;
+}
+
+
+form#donorForm input[type=submit]:hover {
+   background-color: rgba(0, 13, 200, 0.6);
+   color: white;
+}
 
 /* Aside Styles */
 
+aside {
+   -webkit-flex: 2 1 200px;
+   flex: 2 1 200px;
+   width: 100%;
+}
+
 aside span {
    display: block;
-   width: 100px;
+   width: 240px;
    float: left;
-   margin: 3px 0px 3px 5px;
+   margin: 5px 0px 5px 5px;
    font-size: 1.0em;
    color: black;
 }
 
 aside#donorAside table {
-   margin: 0px 25px 45px;   
+   width: 260px;
+   margin: 0px 15px 45px;   
    padding: 10px;
    border-right: none;
    border-bottom: 5px solid black;
@@ -266,7 +277,6 @@ aside#donorAside table {
    position: relative;
 }
 
-
 aside#donorAside table caption {
    font: bold 1.2em sans-serif;
    text-align: center;
@@ -278,21 +288,23 @@ aside#donorAside table caption {
 }
 
 aside#donorAside table th {
-   font-weight: normal;
+   display: block;
+   float: left;
+   margin: 5px auto;
+   font: bold 1.2em sans-serif;
    text-align: left;
-   font-size: 1.2em;
    color: black;
-   padding-top: 10px;
-   padding-right: 15px;
 }
 
 aside#donorAside table td {
+   display: block;
+   float: left;
    position: relative;
-   font-size: 1vw;
+   height: 30px;
+   font-size: 14px;
    letter-spacing: 0.1em;
-   width: 100%;
-   padding-top: 10px;
    color: black;
+   background-color: rgba(112, 199, 214, 0.3);
 }
 
 
@@ -325,19 +337,6 @@ input:focus {
    background-color: rgb(250, 250, 66);
 }
 
-input#fnBox:focus:valid,
-input#lnBox:focus:valid,
-input#emailBox:focus:valid,
-input#phoneBox:focus:valid {
-   background-color: rgb(153, 250, 153);
-}
-
-input#fnBox:focus:invalid,
-input#lnBox:focus:invalid,
-input#emailBox:focus:invalid,
-input#phoneBox:focus:invalid {
-   background-color: rgb(240, 186, 186);
-}
 
 
 /* Footer text */

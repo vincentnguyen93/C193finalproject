@@ -3,14 +3,21 @@
 <head>   
    <!--
 
+   Filename:  sports_checkout.html
+
+   Author:  Vincent Nguyen
+   Date:    June 9, 2021
+
    -->
 
    <title>Sports Payment Forms</title>
    <meta charset="utf-8" />
    <link rel="stylesheet" href="index_base.css">
    <link rel="stylesheet" href="index_grid.css">
+   <link rel="stylesheet" href="vn_sports_reset.css">
    <link rel="stylesheet" href="sports_checkout.css">
    <script src="sports_donor_info.js" async></script>
+   <script src="sports_weather.js" async></script>
 </head>
 
 <body>
@@ -40,7 +47,11 @@
       </div>
 
 
-   <div class="grid_6">
+   <!-- Aside shows donor's information, 
+   transferred over by sports_donors_info.js and 
+   spans 380px of grid_12 -->
+
+   <div class="grid_5">
       <aside id="donor2info">
          <table>
             <caption>Donor Information</caption>
@@ -64,7 +75,10 @@
       </aside>
    </div>
 
+   <!-- Article is flexible - simple thank you message - spans 480px of grid_12 -->
+   
    <div class="grid_6">
+   <section>
        <article>
            <p>
                Thank you for donating to The Unrecruited community. 
@@ -73,17 +87,28 @@
                We appreciate your generosity and stay tuned!
             </p>
        </article>
-       <!--Return button <a href="vn_sports.html">Home</a> -->
 
+       <!--Return button <a href="vn_sports.html">Home</a> -->
+   <div class="grid_3">
+      <div class="prefix_1">
+       <form action="vn_sports.html" id="home" name="home" method="post">
+          <input type="submit" id="homeButton" value="Home" />
+       </form>
+      </div>
+   </div>
+   
+   </section>
    </div>
 
  
-
+   <!-- Footer spans 960px -->
      <footer class="grid_12">
          <header class="end">
-            <h3><a href="vn_sports.html">Subscribe and stay updated</a>
+            <h3><a href="vn_sports.html"></a>
             </h3>
          </header>
+
+         <!-- Follow side spans 540px on grid_7 -->
          <div class="grid_7">
             <div id="follow">
                   <p>Follow us</p>
@@ -94,6 +119,7 @@
             </div>
          </div>
             
+         <!-- Nav side spans 240px on grid_3 -->
          <div class="grid_3">
             <nav class="foot">
                <ul>

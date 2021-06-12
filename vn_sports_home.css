@@ -48,6 +48,8 @@ body {
     display: flex;
     -webkit-flex-flow: row wrap;
     flex-flow: row wrap; 
+    margin-top: 30px;
+    margin-bottom: 30xp;
     margin-left: auto;
     margin-right: auto;
     width: 980px;
@@ -311,10 +313,6 @@ div#side1 article > a:link, div#side1 article > a:visited {
     text-decoration: none;
 }
 
-div#side1 article > a:hover,  div#side1 article > a:active {
-    color: gray;
-    text-decoration: none;
-}
 
 /* College text and style layout */
 

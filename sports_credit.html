@@ -3,6 +3,11 @@
 <head>   
    <!--
 
+   Filename:  sports_credit.html
+
+   Author:  Vincent Nguyen
+   Date:    June 9, 2021
+
    -->
 
    <title>Sports Payment Forms</title>
@@ -40,7 +45,11 @@
          </nav>
       </div>
 
+   <!-- Beginning main content grid -->
 
+   <!-- Aside shows donor's information, 
+   transferred over by sports_donors_info.js and 
+   spans 300px of grid_12 -->
    <div class="grid_4">
       <aside id="donor2info">
          <table>
@@ -62,23 +71,31 @@
                   <td><span id="donorPhone"></span></td>
             </tr>
          </table>
-      </aside>
+      </aside>   
+   <!--Return button <a href="vn_sports.html">Home</a> -->
+   <div class="grid_4">
+         <form action="sports_donors.html" id="return" name="return" method="post">
+            <input type="submit" id="donateButton" value="Back to Donate Page" />
+         </form>
+   </div>
    </div>
 
+   <!-- Payment form spans 620px of grid_12 -->
    <div class="grid_8">
       <section id="payment">
          <h1>Payment Information</h1>
+
+         <!-- Credit form to input card information -->
 
          <form action="sports_checkout.html" id="credit" name="credit" method="post">
 
             <fieldset id="creditcard">
                
-               <legend>Credit information</legend>
-
-               <label for="cardHolder">Card Holder**</label>
+            
+               <label for="cardHolder">Card Holder</label>
                <input type="text" name="cardHolder" id="cardHolder" required />
 
-               <label>Credit Company**</label>
+               <label>Credit Company</label>
                <fieldset id="cardType">
                   <label class="cardLabel">
                      <input type="radio" name="company" id="amex" required />
@@ -98,11 +115,12 @@
                   </label>
                </fieldset>
 
-               <label for="cardNumber">Credit Card Number**</label>
+               <label for="cardNumber">Credit Card Number</label>
                <input type="text" name="cardNumber" id="cardNumber" required 
                pattern="^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$" />
 
-               <label for="expDate">Expiration Date**</label>
+               <!-- Select input separated by month and date -->
+               <label for="expDate">Expiration Date</label>
                <select id="months" name="months" size="" required>
                   <option value="Jan">Jan</option>
                   <option value="Feb">Feb</option>
@@ -134,17 +152,20 @@
                <input type="text" name="cvc" id="cvc" pattern="^\d{3,4}$" required />
             </fieldset>
 
-            <p id="disclaimer">** - Required item</p>
             <input type="submit" id="subButton" value="Submit Payment" />
          </form>
       </section>
    </div>
 
+   <!-- Footer spans 960px -->
+   
      <footer class="grid_12">
          <header class="end">
-            <h3><a href="vn_sports.html">Subscribe and stay updated</a>
+            <h3><a href="vn_sports.html"></a>
             </h3>
          </header>
+
+         <!-- Follow side spans 540px on grid_7 -->
          <div class="grid_7">
             <div id="follow">
                   <p>Follow us</p>
@@ -155,6 +176,7 @@
             </div>
          </div>
             
+         <!-- Nav side spans 240px on grid_3 -->
          <div class="grid_3">
             <nav class="foot">
                <ul>

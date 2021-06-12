@@ -2,7 +2,12 @@
 <html lang="en">
 <head>
    <!--
-      -->
+
+   Filename:  sports_donors.html
+
+   Author:  Vincent Nguyen
+   Date:    June 9, 2021
+   -->
 
    <title>Sports Donors</title>
    <meta charset="utf-8" />
@@ -12,6 +17,8 @@
    <script src="sports_donors_sort.js" async></script>
    <script src="sports_donor_signup.js" async></script>
 </head>
+
+
 
 <body>
 <div class="container">
@@ -37,19 +44,29 @@
       </nav>
    </div>
    
+
+   <!-- Main table spans 620px of grid_12,
+   using sports_donors_info.js and sports_donors_sort.js
+   to pull from local storage -->
    <div class="grid_8">
       <section id="topDonors">
          <div id="donorTable"></div>
       </section>
    </div>
 
+   
+   <!-- Aside shows donor's information, 
+   form modified by sports_donor_info.js
+   spans 300px of grid_12 -->
    <div class="grid_4">
       <section id="donorInfo">
          <form id="donorForm" name="donorForm" method="post" action="sports_credit.html">
-         <h1>Sports Donor Information</h1>
+         <h1>Sports Donation Form</h1>
             
             <fieldset id="contactInfo">
-               <legend>Donate below:</legend>
+               <label for="donationBox">Donation:</label>
+               <input type="text" name="donationAmt" id="donationBox" placeholder="$nnn" required />             
+            
                <label for="fnBox">First Name:</label>
                <input type="text" name="firstName" id="fnBox" required />
       
@@ -63,9 +80,7 @@
                <input type="tel" name="phoneNumber" id="phoneBox"
                pattern="\d{10}$|^(\d{3}\s*)-?\d{3}[\s-]?-\d{4}$" placeholder = "(nnn)-nnn-nnnn" required />
 
-               <label for="donationBox">Donation:</label>
-               <input type="text" name="donationAmt" id="donationBox" placeholder="$nnn.nn" required />             
-            
+
             
                <input type="submit" value="Continue" id="contactSubmit">
 
@@ -75,18 +90,22 @@
       </section>
    </div>
 
+   <!-- Aside shows donor's information, 
+   form modified by sports_donor_info.js
+   spans 300px of grid_12 -->
    <div class="grid_4">
    <aside id="donorAside">
       <table>
-         <caption>Donor Information</caption>
-         <tr>
-            <th>Name</th>
-               <td><span id="donorName"></span></td>            
-         </tr>
+         <caption>Sports Donor Information</caption>
          <tr>
             <th>Donation</th>
                <td><span id="donation"></span></td>
          </tr>
+         <tr>
+            <th>Name</th>
+               <td><span id="donorName"></span></td>            
+         </tr>
+
          <tr>
             <th>Email</th>
                <td><span id="donorEmail"></span></td>
@@ -99,17 +118,21 @@
    </aside>
    </div>
 
+   <!-- Donation summary includes total donors and donations 
+   from sports_donors_sorts.js spans 300px of grid_12 -->
    <div class="grid_4">
       <div id="donationSummary"></div>
    </div>
 
-
+   <!-- Footer spans 960px -->
    <div class="grid_12">
       <footer>
          <header class="end">
             <h1><a href="vn_sports.html">The Unrecruited</a>
             </h1>
          </header>
+         
+         <!-- Follow side spans 540px on grid_7 -->
          <div class="grid_7">
             <div id="follow">
                <article>
@@ -125,6 +148,7 @@
             </div>
          </div>
             
+         <!-- Nav side spans 240px on grid_3 -->
          <div class="grid_3">
             <nav class="foot">
                <ul>

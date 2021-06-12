@@ -2,20 +2,23 @@
 
 /* 
 
+   Filename:  sports_donor_signup.js
 
-   Author:  
-   Date:    
+   Author:  Vincent Nguyen
+   Date:    June 9, 2021
    
    Function List
    =============
    
    donorSubmission()
-      Calculates the cost of the registration and saves data
-      in session storage
+   Calls values from sports_donors_sort and plugs it into form HTML elements using sessionStorage and corresponding
+   variable. This will be distributed to other aside HTML elements to display donor information.
       
    writeSessionValues()
-      Transfer data values from donation in to the
-      registration summary form
+   Calls values from sports_donors_sort to distribute to sports_donors.html, sports_credit.html
+   and sports_checkout.html to display in corresponding aside HTML elements. 
+   It displays donor's information for the donor to confirm on each page.
+
 
 */
 
